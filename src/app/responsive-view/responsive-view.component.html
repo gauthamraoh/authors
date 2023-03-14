@@ -1,0 +1,48 @@
+<div class="container responsive-main">
+  <!-- Author details row -->
+  <div class="row">
+    <div class="col-12">
+      <h2>Author Details</h2>
+    </div>
+    <div class="col-md-4 col-sm-12 author-details">
+      <div class="row">
+        <div class="col-4">Name:</div>
+        <div class="col-8">{{ values?.data?.author }}</div>
+        <div class="col-4">Birth Place:</div>
+        <div class="col-8">{{ values?.data?.birthPlace }}</div>
+        <div class="col-4">Birthday:</div>
+        <div class="col-8">{{ values?.data?.birthday }}</div>
+      </div>
+    </div>
+  </div>
+  <!-- Author list of books row -->
+  <div class="row">
+    <div
+      class="col-md-6 col-sm-12 col-xs-12 card-layout"
+      *ngFor="let item of values?.data?.books"
+    >
+      <div class="card-body">
+        <div class="card-inner">
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <img
+              style="width: 100px; height: 100px"
+              [src]="item.imageUrl"
+              alt="book"
+            />
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 publish-details">
+            <p>Publish Year: {{ item.PublishDate }}</p>
+            <p>
+              Title: <a [href]="item.purchaseLink">{{ item.title }}</a>
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <button class="btn btn-primary" style="float: right" value="Buy">
+              <a [href]="item.purchaseLink">Buy</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
