@@ -1,6 +1,10 @@
 # authors
 
-# To run this app follow the below steps
+# Install node for windows/mac
+
+# Install angular/cli
+
+# To run the app follow the below steps
 
 # 1) Clone respository to folder
 
@@ -11,8 +15,6 @@
 # 4) Open browser and type localhost:4200/
 
 # 5) App will open in the browser
-
-
 
 
 # For resposive card view created seperate page because we cannot use sort functionality when there is two rows in the page for desktop view.
