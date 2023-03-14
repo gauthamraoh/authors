@@ -4,7 +4,7 @@
 
 # Install angular/cli
 
-# To run this app follow the below steps
+# To run the app follow the below steps
 
 # 1) Clone respository to folder
 
