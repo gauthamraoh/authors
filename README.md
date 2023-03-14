@@ -1,6 +1,8 @@
 # authors
 
-Install node and angular/cli
+# Install node for windows/mac
+
+# Install angular/cli
 
 # To run this app follow the below steps
 
