@@ -4,7 +4,7 @@
     <div class="col-12">
       <h2>Author Details</h2>
     </div>
-    <div class="col-md-4 col-sm-12 author-details">
+    <div class="col-md-6 col-sm-12 author-details">
       <div class="row">
         <div class="col-4">Name:</div>
         <div class="col-8">{{ values?.data?.author }}</div>
@@ -13,6 +13,15 @@
         <div class="col-4">Birthday:</div>
         <div class="col-8">{{ values?.data?.birthday }}</div>
       </div>
+    </div>
+    <div class="col-md-6 col-sm-12 responsive-button">
+      <button
+        class="btn btn-primary"
+        routerLink="/"
+        value="Back"
+      >
+       Go Back
+      </button>
     </div>
   </div>
   <!-- Author list of books row -->

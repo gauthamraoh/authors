@@ -36,7 +36,7 @@ export class AuthorBooksComponent implements AfterViewInit {
       this.dataSource.sort = this.sort;
     });
   }
-  
+
   // Sort alphabetically and chronologically
   ngAfterViewInit() {
     if (this.dataSource) this.dataSource.sort = this.sort;
@@ -56,20 +56,24 @@ export class AuthorBooksComponent implements AfterViewInit {
 
     // Close modal validate and update data to the table
     dialogRef.afterClosed().subscribe((result) => {
-      if (!result?.PublishDate || !result.title) {
-        this.errorMessage = true;
-        setTimeout(() => {
-          this.errorMessage = false;
-        }, 3000);
+      if (result) {
+        if (!result?.PublishDate || !result.title) {
+          this.errorMessage = true;
+          setTimeout(() => {
+            this.errorMessage = false;
+          }, 3000);
+        } else {
+          this.successMessage = true;
+          setTimeout(() => {
+            this.successMessage = false;
+          }, 3000);
+          this.data = result;
+          this.temp.push(this.data);
+          this.dataSource = new MatTableDataSource(this.temp);
+          this.dataSource.sort = this.sort;
+        }
       } else {
-        this.successMessage = true;
-        setTimeout(() => {
-          this.successMessage = false;
-        }, 3000);
-        this.data = result;
-        this.temp.push(this.data);
-        this.dataSource = new MatTableDataSource(this.temp);
-        this.dataSource.sort = this.sort;
+        return;
       }
     });
   }

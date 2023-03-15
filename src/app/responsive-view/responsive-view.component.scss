@@ -41,6 +41,9 @@
   .author-details .row div {
     padding-bottom: 15px;
   }
+  .responsive-button > button {
+    float: right !important;
+  }
 }
 
 /* Responsive styles for tablet and mobile */
@@ -48,5 +51,8 @@
   .card-layout {
     max-width: 100%;
     margin: 5px;
+  }
+  .responsive-button button {
+    float: left !important;
   }
 }
